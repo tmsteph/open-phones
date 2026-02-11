@@ -258,3 +258,294 @@
       font-family: var(--mono);
       font-size: 12px;
       color: var(--muted);
+      background: rgba(0,0,0,.15);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 14px;
+      overflow:auto;
+      white-space: pre;
+      margin-top: 12px;
+    }
+    @media (prefers-color-scheme: light){
+      .diagram{background: rgba(20,40,80,.06)}
+    }
+
+    /* footer */
+    footer{
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--faint);
+      font-size: 12px;
+      display:flex; gap: 12px; justify-content:space-between; flex-wrap:wrap;
+    }
+
+    /* accessibility */
+    .sr{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0}
+    :focus-visible{outline: 2px solid rgba(127,184,255,.7); outline-offset: 3px; border-radius: 14px}
+
+    /* reduce motion */
+    @media (prefers-reduced-motion: reduce){
+      *{scroll-behavior:auto !important}
+      .btn:hover{transform:none}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav" role="navigation" aria-label="Primary">
+      <a class="brand" href="#top">
+        <span class="logo" aria-hidden="true"></span>
+        <span>
+          <b>3DVR.tech</b>
+          <small>Builders shipping human-first tools</small>
+        </span>
+      </a>
+
+      <nav class="navlinks">
+        <a href="#problem">Problem</a>
+        <a href="#solution">Solution</a>
+        <a href="#modular">Modular Mic</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#join">Join</a>
+      </nav>
+
+      <div class="cta">
+        <a class="btn" href="#join">Get updates</a>
+        <a class="btn primary" href="#join" aria-label="Join the early access list">
+          <span>Early Access</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="wrap">
+    <div class="hero">
+      <div class="card heroMain">
+        <div class="kicker">
+          <span class="pill">Concept product</span>
+          <span class="pill">Wired USB-C</span>
+          <span class="pill">Open-ear comfort</span>
+          <span class="pill">Stagehand-friendly calls</span>
+        </div>
+
+        <h1>LineClear — the wired open-ear headset we wish existed.</h1>
+        <p class="lead">
+          Avantree-style earhooks feel great all day, but inline mics fall apart in loud venues.
+          LineClear fixes that with a <b>detachable call mic module</b> that’s discreet, rugged,
+          and routed down your back/shirt — <b>no Bluetooth required</b>.
+        </p>
+
+        <div class="stack">
+          <a class="btn primary" href="#join">Join the build list</a>
+          <a class="btn" href="#modular">See the modular mic idea</a>
+          <span class="pill" title="Sensory friendly defaults">Dark-mode-first • low motion</span>
+        </div>
+
+        <div class="callout">
+          <b>Goal:</b> Take startup calls while pushing cases on a noisy stage — without callers hearing the whole room.
+          <br />
+          <span>Open-ear stays open. The mic does the heavy lifting.</span>
+        </div>
+      </div>
+
+      <aside class="card heroAside">
+        <div class="spec">
+          <h3>What we’re building</h3>
+          <p>Two modes: <b>Listen</b> (no mic attached) and <b>Call</b> (detachable directional mic).</p>
+
+          <div class="specGrid" aria-label="Key specs">
+            <div class="kv"><span>Connector</span><b>USB-C (DAC)</b></div>
+            <div class="kv"><span>Fit</span><b>Open-ear hooks</b></div>
+            <div class="kv"><span>Mic</span><b>Detachable module</b></div>
+            <div class="kv"><span>Routing</span><b>Behind neck → back</b></div>
+            <div class="kv"><span>Use case</span><b>Stage / field work</b></div>
+          </div>
+        </div>
+
+        <div class="spec" style="margin-top:12px">
+          <h3>Why detachable?</h3>
+          <p>
+            A fixed boom is effective but not always welcome.
+            Detachable lets you stay low-profile until you need pro call clarity.
+          </p>
+        </div>
+      </aside>
+    </div>
+
+    <section id="problem">
+      <div class="grid">
+        <div class="card sectionCard col-6">
+          <h2>The current market is a triangle you can’t win</h2>
+          <ul class="list">
+            <li class="li">
+              <span class="dot"></span>
+              <div>
+                <b>Open-ear + wired</b>
+                <span>Comfort + awareness, but calls pick up everything.</span>
+              </div>
+            </li>
+            <li class="li">
+              <span class="dot"></span>
+              <div>
+                <b>Noise-proof calls</b>
+                <span>Usually requires a boom mic or wireless DSP.</span>
+              </div>
+            </li>
+            <li class="li">
+              <span class="dot"></span>
+              <div>
+                <b>Discreet all-day wear</b>
+                <span>Inline mics are too far from your mouth in loud environments.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card sectionCard col-6">
+          <h2>Real stagehand requirements</h2>
+          <p>Designed for load-ins, comms moments, and long shifts.</p>
+          <ul class="list">
+            <li class="li"><span class="dot"></span><div><b>No ear-canal seal</b><span>Less fatigue, more awareness.</span></div></li>
+            <li class="li"><span class="dot"></span><div><b>Cable stays controlled</b><span>Behind neck, down back, clipped.</span></div></li>
+            <li class="li"><span class="dot"></span><div><b>Mic must reject noise</b><span>Directional + closer to mouth.</span></div></li>
+            <li class="li"><span class="dot"></span><div><b>Works on phones</b><span>USB-C with proper DAC.</span></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="solution">
+      <div class="grid">
+        <div class="card sectionCard col-8">
+          <h2>The solution: split “listening” from “calling”</h2>
+          <p>
+            Keep the open-ear comfort you already like — then add a detachable mic when you need it.
+            This is a hardware-first solution that doesn’t rely on Bluetooth radios or heavy noise algorithms.
+          </p>
+
+          <div class="diagram" role="img" aria-label="Cable routing diagram">
+PHONE (USB-C)
+   │
+   ├── USB-C DAC inline pod (volume/mute)
+   │
+   ├── main cable up inside shirt
+   │
+   ├── Y-split behind neck
+   │     ├─ Left open-ear hook speaker
+   │     └─ Right open-ear hook speaker
+   │
+   └── (optional) Detachable mic module
+         ├─ clips at collar / chest strap
+         └─ points toward mouth (directional)
+          </div>
+        </div>
+
+        <div class="card sectionCard col-4">
+          <h2>Modes</h2>
+          <ul class="list">
+            <li class="li">
+              <span class="dot"></span>
+              <div>
+                <b>Listen Mode</b>
+                <span>No mic attached. Clean, low-profile, comfortable all day.</span>
+              </div>
+            </li>
+            <li class="li">
+              <span class="dot"></span>
+              <div>
+                <b>Call Mode</b>
+                <span>Attach mic module near collar. Better voice focus in noise.</span>
+              </div>
+            </li>
+          </ul>
+
+          <div class="callout">
+            <b>Key idea:</b> Put the mic where it works (near your mouth),
+            while keeping the headset where it’s comfortable (open-ear).
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="modular">
+      <div class="grid">
+        <div class="card sectionCard col-6">
+          <h2>Detachable mic module (what it should be)</h2>
+          <ul class="list">
+            <li class="li"><span class="dot"></span><div><b>Directional (cardioid-ish)</b><span>Rejects room wash better than inline mics.</span></div></li>
+            <li class="li"><span class="dot"></span><div><b>Clips like a lav</b><span>Collar, shirt seam, chest strap, harness.</span></div></li>
+            <li class="li"><span class="dot"></span><div><b>Quick attach</b><span>Magnetic or locking micro connector.</span></div></li>
+            <li class="li"><span class="dot"></span><div><b>Windscreen included</b><span>Usable outdoors and on docks/ramps.</span></div></li>
+          </ul>
+        </div>
+
+        <div class="card sectionCard col-6">
+          <h2>Open-ear earhooks (Avantree vibe, but rugged)</h2>
+          <ul class="list">
+            <li class="li"><span class="dot"></span><div><b>Soft hook geometry</b><span>Stable during movement; helmet-friendly.</span></div></li>
+            <li class="li"><span class="dot"></span><div><b>Speech-tuned EQ</b><span>Calls/podcasts stay intelligible.</span></div></li>
+            <li class="li"><span class="dot"></span><div><b>Replaceable cable sections</b><span>Field repair beats re-buying.</span></div></li>
+            <li class="li"><span class="dot"></span><div><b>Matte, low-glare finish</b><span>Discreet on show site.</span></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap">
+      <div class="grid">
+        <div class="card sectionCard col-12">
+          <h2>Build roadmap (MVP → field-ready)</h2>
+          <ul class="list" style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap:12px">
+            <li class="li"><span class="dot"></span><div><b>v0: Prototype harness</b><span>Earhook fit + cable routing + shirt clip testing.</span></div></li>
+            <li class="li"><span class="dot"></span><div><b>v1: USB-C DAC pod</b><span>Reliable volume/mute + phone compatibility.</span></div></li>
+            <li class="li"><span class="dot"></span><div><b>v1.1: Detachable mic</b><span>Clip mic module + connector standardization.</span></div></li>
+            <li class="li"><span class="dot"></span><div><b>v1.5: Field tests</b><span>Load-ins, docks, FOH, truck pack: real noise.</span></div></li>
+          </ul>
+
+          <div class="callout">
+            If you’re on show sites: we want your environments — arenas, ballrooms, theaters, clubs, outdoors.
+            The whole point is to make callers stop complaining about your background noise.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="join">
+      <div class="grid">
+        <div class="card sectionCard col-8">
+          <h2>Join the early list</h2>
+          <p>
+            Drop your email (or just copy/paste the message text) and we’ll keep it simple:
+            build updates, prototype photos, and a first-run preorder when ready.
+          </p>
+
+          <form onsubmit="return handleSignup(event)" style="margin-top:14px; display:grid; gap:10px; max-width: 680px;">
+            <label class="sr" for="email">Email</label>
+            <input id="email" name="email" type="email" required
+              placeholder="you@domain.com"
+              style="padding:14px 14px; border-radius:16px; border:1px solid var(--line); background: rgba(255,255,255,.03); color: var(--text); font-size:14px;"
+            />
+            <label class="sr" for="note">Note</label>
+            <textarea id="note" name="note" rows="3"
+              placeholder="Optional: your work environment (arena/theater/club), phone model, and what people complain about on calls."
+              style="padding:14px 14px; border-radius:16px; border:1px solid var(--line); background: rgba(255,255,255,.03); color: var(--text); font-size:14px; resize: vertical;"
+            ></textarea>
+
+            <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+              <button class="btn primary" type="submit" style="cursor:pointer">
+                <span>Save interest</span><span aria-hidden="true">→</span>
+              </button>
+              <button class="btn" type="button" onclick="copySignupText()" style="cursor:pointer">
+                Copy message text
+              </button>
+              <span class="pill" id="status" aria-live="polite">No spam. No tracking pixels.</span>
+            </div>
+          </form>
+        </div>
+
+        <div class="card sectionCard col-4">
+          <h2>Quick questions we care about</h2>
+          <ul class="list">
